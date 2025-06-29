@@ -311,17 +311,11 @@
   <section id="installing-plix">
 <h1>Installing PLIX<a class="headerlink" href="#installing-plix" title="Permalink to this heading">#</a></h1>
 <p>PLIX can be installed as a PIP package</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>plix-env
-
-<span class="nb">source</span><span class="w"> </span>plix-env/bin/activate
-
-pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>pip
-
-pip<span class="w"> </span>install<span class="w"> </span>-U<span class="w"> </span>--no-cache<span class="w">  </span>git+https://github.com/ComputoLab/plix.git
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>-U<span class="w"> </span>--no-cache<span class="w">  </span>git+https://github.com/plixlabdev/plixlab.git
 </pre></div>
 </div>
 <p>Test:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;import plix; plix.Slide().text(r&quot;Welcome to Plix!&quot;).show()&#39;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;import plixlab as px; px.Slide().text(r&quot;Welcome to PlixLab!&quot;).show()&#39;</span>
 </pre></div>
 </div>
 </section>

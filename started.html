@@ -311,7 +311,7 @@
   <section id="plix-quickstart">
 <h1>PLIX Quickstart<a class="headerlink" href="#plix-quickstart" title="Permalink to this heading">#</a></h1>
 <p>A minimal single-slide presentation can be created with two lines of code</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">plix</span><span class="w"> </span><span class="kn">import</span> <span class="n">Slide</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">plixlab</span><span class="w"> </span><span class="kn">import</span> <span class="n">Slide</span>
 
 <span class="n">Slide</span><span class="p">()</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="s1">&#39;Welcome to Plix!&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
@@ -355,7 +355,7 @@ document.addEventListener('DOMContentLoaded', function () {
 <div class="line-block">
 <div class="line">For presentation mode, click the square button. To add a picture to the current slide, use the <code class="docutils literal notranslate"><span class="pre">img</span></code> tag</div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">plix</span><span class="w"> </span><span class="kn">import</span> <span class="n">Slide</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">plixlab</span><span class="w"> </span><span class="kn">import</span> <span class="n">Slide</span>
 
 
 <span class="n">Slide</span><span class="p">()</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="s1">&#39;Welcome to Plix!&#39;</span><span class="p">)</span>
@@ -401,7 +401,7 @@ document.addEventListener('DOMContentLoaded', function () {
 <div class="line-block">
 <div class="line">Plix features several interactive data-oriented components. Here is an example for embedding plotly data</div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">plix</span><span class="w"> </span><span class="kn">import</span> <span class="n">Slide</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">plixlab</span><span class="w"> </span><span class="kn">import</span> <span class="n">Slide</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">plotly.express</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">px</span>
 
 <span class="n">df</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">iris</span><span class="p">()</span>
@@ -452,7 +452,7 @@ document.addEventListener('DOMContentLoaded', function () {
 <div class="line-block">
 <div class="line">Lastly, to compose multiple slides you can use the <code class="docutils literal notranslate"><span class="pre">Presentation</span></code> class</div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">plix</span><span class="w"> </span><span class="kn">import</span> <span class="n">Slide</span><span class="p">,</span><span class="n">Presentation</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">plixlab</span><span class="w"> </span><span class="kn">import</span> <span class="n">Slide</span><span class="p">,</span><span class="n">Presentation</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">plotly.express</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">px</span>
 
 <span class="n">s1</span> <span class="o">=</span> <span class="n">Slide</span><span class="p">()</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="s1">&#39;Welcome to Plix!&#39;</span><span class="p">)</span>
