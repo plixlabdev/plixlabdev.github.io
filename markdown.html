@@ -320,40 +320,10 @@
 
 <div style="width: 100%; display: block;">
 <div class="embed-container">
-    <iframe id="iframeExample_6" src="_static/web/index.html?suppress_SSE=true" frameborder="0" allowfullscreen style="border:2px solid gray;"></iframe>
+  <iframe id="iframeExample_6" src="_static/examples/index.html?file=references/markdown.plx" frameborder="0" allowfullscreen style="border:2px solid gray;"></iframe>
 </div>
 </div>
-<div style="height: 1em;"></div>  <!-- spacer added here -->
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-    const iframe = document.getElementById('iframeExample_6');
-    let arrayBuffer = null;
-    let iframeLoaded = false;
-
-    function tryPostMessage() {
-        if (iframeLoaded && arrayBuffer) {
-            iframe.contentWindow.postMessage(arrayBuffer, '*');
-        }
-    }
-
-    iframe.addEventListener('load', function () {
-        iframeLoaded = true;
-        tryPostMessage();
-    });
-
-    fetch('_static/reference/markdown.plx')
-        .then(response => response.blob())
-        .then(blob => {
-            const reader = new FileReader();
-            reader.onload = function () {
-                arrayBuffer = this.result;
-                tryPostMessage();
-            };
-            reader.readAsArrayBuffer(blob);
-        })
-        .catch(error => console.error('Error loading file:', error));
-});
-</script>
+<div style="height: 1em;"></div> 
 <p>Equations can be added using <code class="docutils literal notranslate"><span class="pre">Latex</span></code> syntax, e.g.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">plix</span><span class="w"> </span><span class="kn">import</span> <span class="n">Slide</span>
 
@@ -363,40 +333,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
 <div style="width: 100%; display: block;">
 <div class="embed-container">
-    <iframe id="iframeExample_7" src="_static/web/index.html?suppress_SSE=true" frameborder="0" allowfullscreen style="border:2px solid gray;"></iframe>
+  <iframe id="iframeExample_7" src="_static/examples/index.html?file=references/equation.plx" frameborder="0" allowfullscreen style="border:2px solid gray;"></iframe>
 </div>
 </div>
-<div style="height: 1em;"></div>  <!-- spacer added here -->
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-    const iframe = document.getElementById('iframeExample_7');
-    let arrayBuffer = null;
-    let iframeLoaded = false;
-
-    function tryPostMessage() {
-        if (iframeLoaded && arrayBuffer) {
-            iframe.contentWindow.postMessage(arrayBuffer, '*');
-        }
-    }
-
-    iframe.addEventListener('load', function () {
-        iframeLoaded = true;
-        tryPostMessage();
-    });
-
-    fetch('_static/reference/equation.plx')
-        .then(response => response.blob())
-        .then(blob => {
-            const reader = new FileReader();
-            reader.onload = function () {
-                arrayBuffer = this.result;
-                tryPostMessage();
-            };
-            reader.readAsArrayBuffer(blob);
-        })
-        .catch(error => console.error('Error loading file:', error));
-});
-</script>
+<div style="height: 1em;"></div> 
 </section>
 
 

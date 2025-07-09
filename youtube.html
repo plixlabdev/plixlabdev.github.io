@@ -319,40 +319,10 @@
 
 <div style="width: 100%; display: block;">
 <div class="embed-container">
-    <iframe id="iframeExample_19" src="_static/web/index.html?suppress_SSE=true" frameborder="0" allowfullscreen style="border:2px solid gray;"></iframe>
+  <iframe id="iframeExample_19" src="_static/examples/index.html?file=references/youtube.plx" frameborder="0" allowfullscreen style="border:2px solid gray;"></iframe>
 </div>
 </div>
-<div style="height: 1em;"></div>  <!-- spacer added here -->
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-    const iframe = document.getElementById('iframeExample_19');
-    let arrayBuffer = null;
-    let iframeLoaded = false;
-
-    function tryPostMessage() {
-        if (iframeLoaded && arrayBuffer) {
-            iframe.contentWindow.postMessage(arrayBuffer, '*');
-        }
-    }
-
-    iframe.addEventListener('load', function () {
-        iframeLoaded = true;
-        tryPostMessage();
-    });
-
-    fetch('_static/reference/youtube.plx')
-        .then(response => response.blob())
-        .then(blob => {
-            const reader = new FileReader();
-            reader.onload = function () {
-                arrayBuffer = this.result;
-                tryPostMessage();
-            };
-            reader.readAsArrayBuffer(blob);
-        })
-        .catch(error => console.error('Error loading file:', error));
-});
-</script>
+<div style="height: 1em;"></div> 
 <div class="line-block">
 <div class="line">where the video ID can be easily obtained from the URL.</div>
 </div>

@@ -320,40 +320,10 @@
 
 <div style="width: 100%; display: block;">
 <div class="embed-container">
-    <iframe id="iframeExample_13" src="_static/web/index.html?suppress_SSE=true" frameborder="0" allowfullscreen style="border:2px solid gray;"></iframe>
+  <iframe id="iframeExample_13" src="_static/examples/index.html?file=references/shape.plx" frameborder="0" allowfullscreen style="border:2px solid gray;"></iframe>
 </div>
 </div>
-<div style="height: 1em;"></div>  <!-- spacer added here -->
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-    const iframe = document.getElementById('iframeExample_13');
-    let arrayBuffer = null;
-    let iframeLoaded = false;
-
-    function tryPostMessage() {
-        if (iframeLoaded && arrayBuffer) {
-            iframe.contentWindow.postMessage(arrayBuffer, '*');
-        }
-    }
-
-    iframe.addEventListener('load', function () {
-        iframeLoaded = true;
-        tryPostMessage();
-    });
-
-    fetch('_static/reference/shape.plx')
-        .then(response => response.blob())
-        .then(blob => {
-            const reader = new FileReader();
-            reader.onload = function () {
-                arrayBuffer = this.result;
-                tryPostMessage();
-            };
-            reader.readAsArrayBuffer(blob);
-        })
-        .catch(error => console.error('Error loading file:', error));
-});
-</script>
+<div style="height: 1em;"></div> 
 <p>All the shapes take the coordinates <code class="docutils literal notranslate"><span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">y</span></code>, the width <code class="docutils literal notranslate"><span class="pre">w</span></code> (in fractional coordinates), the anti-clockwise <code class="docutils literal notranslate"><span class="pre">orientation</span></code> in degrees, and the <code class="docutils literal notranslate"><span class="pre">color</span></code> option in normalized RGB values. The <code class="docutils literal notranslate"><span class="pre">square</span></code> shape also takes <code class="docutils literal notranslate"><span class="pre">aspect_ratio</span></code>.</p>
 </section>
 

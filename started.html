@@ -319,40 +319,10 @@
 
 <div style="width: 100%; display: block;">
 <div class="embed-container">
-    <iframe id="iframeExample_14" src="_static/web/index.html?suppress_SSE=true" frameborder="0" allowfullscreen style="border:2px solid gray;"></iframe>
+  <iframe id="iframeExample_14" src="_static/examples/index.html?file=references/welcome.plx" frameborder="0" allowfullscreen style="border:2px solid gray;"></iframe>
 </div>
 </div>
-<div style="height: 1em;"></div>  <!-- spacer added here -->
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-    const iframe = document.getElementById('iframeExample_14');
-    let arrayBuffer = null;
-    let iframeLoaded = false;
-
-    function tryPostMessage() {
-        if (iframeLoaded && arrayBuffer) {
-            iframe.contentWindow.postMessage(arrayBuffer, '*');
-        }
-    }
-
-    iframe.addEventListener('load', function () {
-        iframeLoaded = true;
-        tryPostMessage();
-    });
-
-    fetch('_static/reference/welcome.plx')
-        .then(response => response.blob())
-        .then(blob => {
-            const reader = new FileReader();
-            reader.onload = function () {
-                arrayBuffer = this.result;
-                tryPostMessage();
-            };
-            reader.readAsArrayBuffer(blob);
-        })
-        .catch(error => console.error('Error loading file:', error));
-});
-</script>
+<div style="height: 1em;"></div> 
 <div class="line-block">
 <div class="line">For presentation mode, click the square button. To add a picture to the current slide, use the <code class="docutils literal notranslate"><span class="pre">img</span></code> tag</div>
 </div>
@@ -366,40 +336,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
 <div style="width: 100%; display: block;">
 <div class="embed-container">
-    <iframe id="iframeExample_15" src="_static/web/index.html?suppress_SSE=true" frameborder="0" allowfullscreen style="border:2px solid gray;"></iframe>
+  <iframe id="iframeExample_15" src="_static/examples/index.html?file=references/logo.plx" frameborder="0" allowfullscreen style="border:2px solid gray;"></iframe>
 </div>
 </div>
-<div style="height: 1em;"></div>  <!-- spacer added here -->
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-    const iframe = document.getElementById('iframeExample_15');
-    let arrayBuffer = null;
-    let iframeLoaded = false;
-
-    function tryPostMessage() {
-        if (iframeLoaded && arrayBuffer) {
-            iframe.contentWindow.postMessage(arrayBuffer, '*');
-        }
-    }
-
-    iframe.addEventListener('load', function () {
-        iframeLoaded = true;
-        tryPostMessage();
-    });
-
-    fetch('_static/reference/logo.plx')
-        .then(response => response.blob())
-        .then(blob => {
-            const reader = new FileReader();
-            reader.onload = function () {
-                arrayBuffer = this.result;
-                tryPostMessage();
-            };
-            reader.readAsArrayBuffer(blob);
-        })
-        .catch(error => console.error('Error loading file:', error));
-});
-</script>
+<div style="height: 1em;"></div> 
 <div class="line-block">
 <div class="line">Plix features several interactive data-oriented components. Here is an example for embedding plotly data</div>
 </div>
@@ -418,40 +358,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
 <div style="width: 100%; display: block;">
 <div class="embed-container">
-    <iframe id="iframeExample_16" src="_static/web/index.html?suppress_SSE=true" frameborder="0" allowfullscreen style="border:2px solid gray;"></iframe>
+  <iframe id="iframeExample_16" src="_static/examples/index.html?file=references/plotly.plx" frameborder="0" allowfullscreen style="border:2px solid gray;"></iframe>
 </div>
 </div>
-<div style="height: 1em;"></div>  <!-- spacer added here -->
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-    const iframe = document.getElementById('iframeExample_16');
-    let arrayBuffer = null;
-    let iframeLoaded = false;
-
-    function tryPostMessage() {
-        if (iframeLoaded && arrayBuffer) {
-            iframe.contentWindow.postMessage(arrayBuffer, '*');
-        }
-    }
-
-    iframe.addEventListener('load', function () {
-        iframeLoaded = true;
-        tryPostMessage();
-    });
-
-    fetch('_static/reference/plotly.plx')
-        .then(response => response.blob())
-        .then(blob => {
-            const reader = new FileReader();
-            reader.onload = function () {
-                arrayBuffer = this.result;
-                tryPostMessage();
-            };
-            reader.readAsArrayBuffer(blob);
-        })
-        .catch(error => console.error('Error loading file:', error));
-});
-</script>
+<div style="height: 1em;"></div> 
 <div class="line-block">
 <div class="line">Lastly, to compose multiple slides you can use the <code class="docutils literal notranslate"><span class="pre">Presentation</span></code> class</div>
 </div>
@@ -474,40 +384,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
 <div style="width: 100%; display: block;">
 <div class="embed-container">
-    <iframe id="iframeExample_17" src="_static/web/index.html?suppress_SSE=true" frameborder="0" allowfullscreen style="border:2px solid gray;"></iframe>
+  <iframe id="iframeExample_17" src="_static/examples/index.html?file=references/presentation.plx" frameborder="0" allowfullscreen style="border:2px solid gray;"></iframe>
 </div>
 </div>
-<div style="height: 1em;"></div>  <!-- spacer added here -->
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-    const iframe = document.getElementById('iframeExample_17');
-    let arrayBuffer = null;
-    let iframeLoaded = false;
-
-    function tryPostMessage() {
-        if (iframeLoaded && arrayBuffer) {
-            iframe.contentWindow.postMessage(arrayBuffer, '*');
-        }
-    }
-
-    iframe.addEventListener('load', function () {
-        iframeLoaded = true;
-        tryPostMessage();
-    });
-
-    fetch('_static/reference/presentation.plx')
-        .then(response => response.blob())
-        .then(blob => {
-            const reader = new FileReader();
-            reader.onload = function () {
-                arrayBuffer = this.result;
-                tryPostMessage();
-            };
-            reader.readAsArrayBuffer(blob);
-        })
-        .catch(error => console.error('Error loading file:', error));
-});
-</script>
+<div style="height: 1em;"></div> 
 <div class="line-block">
 <div class="line">For grid mode, click the top left button.</div>
 </div>
